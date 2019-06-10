@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-<template></template>
-=======
 <template></template>
 
+<template></template>
+ddddddd
 
 <script>
 export default {};
