@@ -1,6 +1,6 @@
 var user = {
     //增
-    userinsert: 'INSERT INTO `user` (`id`,`name`,`age`) VALUES(20,?,?)',
+    userinsert: 'INSERT INTO `user` (`id`,`name`,`age`) VALUES(0,?,?)',
     //删
     userdelete: 'delete from user where id=?',
     //改

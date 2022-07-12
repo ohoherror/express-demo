@@ -31,7 +31,7 @@ module.exports = {
                     }
                 }
 
-                jsonWrite(res, result, err.message)
+                jsonWrite(res, result, err?.message || "操作错误")
 
                 connection.release()
             })
