@@ -82,14 +82,14 @@ app.js 程序main文件
 添加商品：http://localhost:3000/goodAdd?
 name=123&desc=123&price=123&sum=234
 
-http://localhost:3000/users/userAdd?
-name=ds1s23&age=32
-
 通过id修改商品：http://localhost:3000/goodUpdate?name=123&desc=2313&price=12&sum=12&id=1
 
 查询所有商品：http://localhost:3000/goodAll
 
 查询单个商品：http://localhost:3000/goodById?id=112
+
+添加用户：http://localhost:3000/users/userAdd?
+name=ds1s23&age=32
 
 ### 6、程序运行思路 ###
 

@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
 });
 
 //增
-router.get('/userAdd', function (req, res, next) {
+router.post('/userAdd', function (req, res, next) {
   userlist.useradd(req, res, next);
 });
 

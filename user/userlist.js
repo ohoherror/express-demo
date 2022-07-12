@@ -5,11 +5,11 @@ var $sql = require('./usersql.js')
 
 var pool = mysql.createPool($util.extend({}, $conf.mysql))
 
-var jsonWrite = function (res, ret) {
+var jsonWrite = function (res, ret, message) {
     if (typeof ret === 'undefined') {
         res.json({
             code: '1',
-            msg: '操作失败'
+            msg: message
         })
     } else {
         res.json(ret)
@@ -19,15 +19,19 @@ var jsonWrite = function (res, ret) {
 module.exports = {
     useradd: function (req, res, next) {
         pool.getConnection(function (err, connection) {
-            var param = req.query || req.params;
+            console.log(req)
+            var param = req.body
             connection.query($sql.userinsert, [param.name, param.age], function (err, result) {
+                console.log(err)
                 if (result) {
+
                     result = {
                         code: 200,
                         msg: '增加成功'
                     }
                 }
-                jsonWrite(res, result)
+
+                jsonWrite(res, result, err.message)
 
                 connection.release()
             })
